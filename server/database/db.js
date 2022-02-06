@@ -1,9 +1,10 @@
+require('dotenv').config()
 import mongoose from 'mongoose';
 
 const Connection = async ()=>{
   try{
       
-    const url='mongodb+srv://dimitri:V7I3vgw4W8EEwEFR@blogapplication.q0hkw.mongodb.net/PROJECT0?retryWrites=true&w=majority';
+    const url=process.env.URL;
     await mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true});
     console.log('MongoDB succefully Connected');
   }
