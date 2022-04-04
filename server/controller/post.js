@@ -10,6 +10,7 @@ const submitPost = async (req,res)=>{
       post.save();
       res.status(200).json('Blog is saved successfully');
     }
+    
     catch(error)
     {
         console.log('Error is coming from controller-POST.js');
